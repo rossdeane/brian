@@ -69,6 +69,7 @@ body .container h1 {
   -moz-border-radius: 45px 45px 60% 60%/45% 45% 14% 14%;
   border-radius: 45px 45px 60% 60%/45% 45% 14% 14%;
   z-index: 13;
+  -webkit-transform: scale(1.5)
 }
 .brian .head:after {
   height: 90%;
@@ -755,7 +756,7 @@ body .container h1 {
   <body>
 
     <div class="container">
-	<h1>Ross's Laptop</h1><br><br><br>
+	<h1 class='title'>Ross's Laptop</h1><br><br><br>
 	<div class="brian">
 		<div class="head">
 			<div class="ear left"></div>
@@ -830,6 +831,9 @@ body .container h1 {
 	<script type="text/javascript" charset="utf-8">
 		
 		var eyes = $(".brian .head .eye .eye-inner");
+    var topTitle = window.location.href.slice(window.location.href.indexOf('?') + 1).split('=')[1];
+    $('.title').text(topTitle);
+
 
 var deg = 0,
 	 deg2 = 180;
